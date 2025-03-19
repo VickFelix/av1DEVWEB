@@ -1,0 +1,136 @@
+body {
+    background-color: #EEDDAA;
+    color: #3366BB;
+    font-size: 16px;
+    font-family: "Stoke", "Lucida Bright", "Liberation", serif;
+    text-align: center;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.imglogo {
+    text-align: left;
+    border-bottom: solid 4px #3366BB ;
+    margin-bottom: 6px;
+    padding-bottom: 15px;
+}
+
+header {
+    display: block;
+    margin-bottom: 1px;
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    width: 90%;
+}
+
+address {
+    text-align: right;
+    font-size: 14px;
+    font-family: "Karla", "Verdana", "Ubuntu", sans-serif;
+    font-style: italic;
+    line-height: 140%;
+    float: right;
+}
+
+nav {
+    display: block;
+    width: 20%;
+    float: left;
+    text-align: left;
+}
+
+nav ul {
+    list-style-type: disc;
+    color: #3366BB;
+    line-height: 230%;
+    margin-top: 40px;
+    padding-left: 20px;
+    text-align: left;
+    text-decoration: underline;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2255AA;
+    font-weight: bold;
+}
+
+nav a:visited {
+    color: #2255CC;
+}
+
+section {
+    display: block;
+    width: 70%;
+    float: right;
+}
+
+.apresentacao {
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+}
+
+.apresentacao img {
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+.tabQueijo {
+    width: 440px;
+    margin: 6px auto;
+    border-collapse: collapse;
+    font-size: 15px;
+    background-color: #FFFFBB;
+    color: #114499 !important;
+    font-family: "Karla", Verdana, Ubuntu, sans-serif; 
+}
+
+
+.tabQueijo th,
+.tabQueijo td {
+    border: 2px solid #000000;
+    padding: 6px 12px 6px 12px;
+}
+
+.linTH {
+    color: #EEEE00;
+    background-color: #887733;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.colTH {
+    color: #222222;
+    background-color: #CCBB88;
+    text-align: left;
+}
+
+.preco {
+    color: #CC0000;
+}
+
+.imgQueijo {
+    width: 60px; 
+    height: 44px;  
+}
+
+.tabQueijo td {
+    background-color: #FFFFBB;
+}
+table.tabQueijo td.nacional,
+table.tabQueijo td.internacional {
+    background-color: #CCBB88 !important;
+    color: #222222 !important;
+    font-weight: bold;
+    text-align: center;
+}

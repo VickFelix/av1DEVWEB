@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canastrão Queijos</title>
+    <link rel="stylesheet" href="styles/harmonizacao.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Stoke&display=swap" rel="stylesheet">
+    
+</head>
+
+
+<body>
+    <!--✨topo da página✨-->
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => document.body.insertAdjacentHTML("afterbegin", data));
+    </script>
+    
+    <section class="conteudoHarm">
+        <h1 class="titulo">Harmonização de Queijos e Vinhos</h1>
+        <div class="listaQueijos">
+            <dl> 
+                <dt><h4>Queijos Nacionais:</h4> </dt>
+                <ul>
+                    <li>Canastra
+                        <dd><p>Harmoniza perfeitamente com tintos de corpo médio e taninos macios. 
+                        <a href="https://camilacenci.com.br/blog/como-harmonizar-queijos-brasileiros-com-vinhos-dicas-imperdiveis.html" target="_blank">(Fonte)</a></p> 
+                        </dd>
+                    </li>
+                    <li>Minas
+                        <dd>Quando combinado com goiabada ou mel, espumantes ou brancos de colheita tardia. 
+                        <a href="https://camilacenci.com.br/blog/como-harmonizar-queijos-brasileiros-com-vinhos-dicas-imperdiveis.html" target="_blank">(Fonte)</a></dd>
+                    </li>
+                </ul>
+                <h4>Queijos Internacionais:</h4>
+                <ul>
+                    <li>Gorgonzola
+                        <dd><p>Pede vinhos intensamente aromáticos e com tendência adocicada, como os do Porto, os Madeira ou Moscatéis. 
+                        <a href="https://blog.famigliavalduga.com.br/harmonizacao-de-queijos-e-vinhos-conheca-as-melhores-combinacoes/" target="_blank">(Fonte)</a></p></dd>
+                    </li>
+                </ul> 
+            </dl>
+        </div>
+    </section>
+</body>
+</html>
+
+
+

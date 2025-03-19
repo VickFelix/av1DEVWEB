@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canastrão Queijos</title>
+    <link rel="stylesheet" href="styles/queijos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Stoke&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => document.body.insertAdjacentHTML("afterbegin", data));
+    </script>
+
+    <section class="conteudoQueijos">
+        <table class="tabQueijo">
+            <tr class="linTH">
+                <th colspan="5">Queijos</th>
+            </tr>
+            <tr class="linTH">
+                <th>Procedência</th>
+                <th>Tipo</th>
+                <th>Imagem</th>
+                <th>Peso</th>
+                <th class="thPreco">Preço</th>
+            </tr>
+            <tr class="procedencia">
+                <td rowspan="3" class="nacional">Nacional</td>
+                <td>Canastra</td>
+                <td><img src="images/canastra.png" class="imgQueijo" alt="Queijo Canastra"></td>
+                <td>500g</td>
+                <td class="preco">R$70,00</td>
+            </tr>
+            <tr class="procedencia">
+                <td>Minas</td>
+                <td><img src="images/queijo-minas.jpg" class="imgQueijo" alt="Queijo Minas"></td>
+                <td>400g</td>
+                <td class="preco">R$23,00</td>
+            </tr>
+            <tr class="procedencia">
+                <td>Coalho</td>
+                <td><img src="images/queijo-coalho.jpg" class="imgQueijo" alt="Queijo Coalho"></td>
+                <td>500g</td>
+                <td class="preco">R$40,00</td>
+            </tr>
+            <tr class="procedencia">
+                <td rowspan="2" class="internacional">Internacional</td>
+                <td>Gorgonzola</td>
+                <td><img src="images/gorgonzola.jpeg" class="imgQueijo" alt="Queijo Gorgonzola"></td>
+                <td>200g</td>
+                <td class="preco">R$20,00</td>
+            </tr>
+            <tr class="procedencia">
+                <td>Brie</td>
+                <td><img src="images/brie.jpg" class="imgQueijo" alt="Queijo Brie"></td>
+                <td>200g</td>
+                <td class="preco">R$30,00</td>
+            </tr>
+        </table>
+    </section>
+</body>
+
+</html>
+
