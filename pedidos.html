@@ -1,112 +1,141 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Canastrão Queijos</title>
+        <link rel="stylesheet" href="styles/pedidos.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Stoke&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <script>
+            fetch("header.html")
+                .then((response) => response.text())
+                .then((data) =>
+                    document.body.insertAdjacentHTML("afterbegin", data)
+                );
+        </script>
+        <div class="divCompras">
+            <h2>Compras</h2>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Canastrão Queijos</title>
-    <link rel="stylesheet" href="styles/pedidos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Stoke&display=swap" rel="stylesheet">    
-</head>
-<body>
-    <script>
-        fetch("header.html")
-            .then(response => response.text())
-            .then(data => document.body.insertAdjacentHTML("afterbegin", data));
-    </script>
-<div class="divCompras">
-    <h2>Compras</h2>
+            <section>
+                <fieldset class="fsEsq">
+                    <legend>Identificação</legend>
+                    <div class="divLinha">
+                        <label class="colPri">Nome:</label>
+                        <input type="text" class="inpGrande" />
+                    </div>
+                    <div class="divLinha">
+                        <label class="colPri">E-mail:</label>
+                        <input type="email" class="inpGrande" />
+                    </div>
+                    <div class="divContainer">
+                        <div>
+                            <div class="divLinha">
+                                <label class="colPri">Endereço:</label>
+                                <textarea class="impEnder"></textarea>
+                            </div>
+                            <div class="divLinha">
+                                <label class="colPri">Telefone:</label>
+                                <input type="text" class="impTelef" />
+                            </div>
+                            <div class="divLinha">
+                                <label class="colPri">Celular:</label>
+                                <input type="text" class="impTelef" />
+                            </div>
+                        </div>
+                        <div>
+                            <fieldset class="fsDir">
+                                <legend>Gênero:</legend>
+                                <input type="radio" name="genero" /> Mas
+                                <input type="radio" name="genero" /> Fem
+                                <input type="radio" name="genero" /> Outro
+                            </fieldset>
 
-    <section>
-        <fieldset class="fsEsq  ">
-            <legend>Identificação</legend>
-            <div class="divLinha">
-                <label class="colPri">Nome:</label>
-                <input type="text" class="inpGrande">
-            </div>
-            <div class="divLinha">
-                <label class="colPri">E-mail:</label>
-                <input type="email" class="inpGrande">
-            </div>
-            <div class="divLinha">
-                <label class="colPri">Endereço:</label>
-                <textarea class="impEnder"></textarea>
-            </div>
-            <div class="divLinha">
-                <label class="colPri">Telefone:</label>
-                <input type="text" class="impTelef">
-            </div>
-            <div class="divLinha">
-                <label class="colPri">Celular:</label>
-                <input type="text" class="impTelef">
-            </div>
-        </fieldset>
+                            <fieldset class="fsDir">
+                                <legend>Nascimento:</legend>
+                                <input
+                                    type="number"
+                                    class="numDD"
+                                    placeholder="DD"
+                                />
+                                /
+                                <input
+                                    type="number"
+                                    class="numDD"
+                                    placeholder="MM"
+                                />
+                                /
+                                <input
+                                    type="number"
+                                    class="numQD"
+                                    placeholder="AAAA"
+                                />
+                            </fieldset>
+                        </div>
+                    </div>
+                </fieldset>
+            </section>
 
-        <fieldset class="fsDir">
-            <div class="divLinha">
-                <label>Gênero:</label>
-                <input type="radio" name="genero"> Mas
-                <input type="radio" name="genero"> Fem
-                <input type="radio" name="genero"> Outro
-            </div>
+            <fieldset class="cartao">
+                <legend>Seleção de Produtos e Pagamento</legend>
+                <div class="cartaoLeft">
+                    <div class="colLabSelProd">
+                        <label class="colPriCompras">Produto:</label>
+                        <select class="colSelProd">
+                            <option>-----</option>
+                            <optgroup label="Nacional">
+                                <option>Minas</option>
+                                <option>Coalho</option>
+                                <option>Canastra</option>
+                            </optgroup>
+                            <optgroup label="Internacional">
+                                <option>Gorgonzola</option>
+                                <option>Brie</option>
+                            </optgroup>
+                        </select>
+                        <button>Comprar</button>
+                    </div>
+    
+                    <fieldset class="fsCartao">
+                        <legend>Cartão</legend>
+                        <div class="divLinha">
+                            <label class="colPriPag">Bandeira:</label>
+                            <input type="radio" name="bandeira" /> Visa
+                            <input type="radio" name="bandeira" /> Master
+                            <input type="radio" name="bandeira" /> Elo
+                        </div>
+                        <div class="divLinha">
+                            <label class="colPriPag">Validade:</label>
+                            <input type="number" class="numDD" placeholder="MM" /> /
+                            <input type="number" class="numQD" placeholder="AAAA" />
+                        </div>
+                        <div class="divLinha">
+                            <label class="colPriPag">Número:</label>
+                            <input type="text" class="impNCC" />
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="cartaoRight">
+                    <textarea class="listaCompras" readonly></textarea>
+                    <div class="divLinha">
+                        <label>Valor R$</label>
+                        <input type="text" class="impMedio" readonly />
+                    </div>
+                </div>
+            </fieldset>
 
-            <div class="divLinha">
-                <label>Nascimento:</label>
-                <input type="number" class="numDD" placeholder="DD"> /
-                <input type="number" class="numDD" placeholder="MM"> /
-                <input type="number" class="numQD" placeholder="AAAA">
+            <div class="botoes">
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
             </div>
-        </fieldset>
-    </section>
-
-    <fieldset>
-        <legend>Seleção de Produtos e Pagamento</legend>
-        <div class="colLabSelProd">
-            <label class="colPriCompras">Produto:</label>
-            <select class="colSelProd">
-                <option>-----</option>
-                <optgroup label="Nacional">
-                    <option>Minas</option>
-                    <option>Coalho</option>
-                    <option>Canastra</option>
-                </optgroup>
-                <optgroup label="Internacional">
-                    <option>Gorgonzola</option>
-                    <option>Brie</option>
-                </optgroup>
-            </select>
-            <button>Comprar</button>
         </div>
-
-        <fieldset class="fsCartao">
-            <legend>Cartão</legend>
-            <div class="divLinha">
-                <label class="colPriPag">Bandeira:</label>
-                <input type="radio" name="bandeira"> Visa
-                <input type="radio" name="bandeira"> Master
-                <input type="radio" name="bandeira"> Elo
-            </div>
-            <div class="divLinha">
-                <label class="colPriPag">Validade:</label>
-                <input type="number" class="numDD" placeholder="MM"> /
-                <input type="number" class="numQD" placeholder="AAAA">
-            </div>
-            <div class="divLinha">
-                <label class="colPriPag">Número:</label>
-                <input type="text" class="impNCC">
-            </div>
-        </fieldset>
-    </fieldset>
-
-    <textarea class="listaCompras" readonly></textarea>
-    <div class="divLinha">
-        <label>Valor R$</label>
-        <input type="text" class="impMedio" readonly>
-    </div>
-
-    <div class="botoes">
-        <button type="submit">Enviar</button>
-        <button type="reset">Limpar</button>
-    </div>
-</div>
+    </body>
+</html>
